@@ -1,4 +1,3 @@
-// const {When,Then,Given}=require('@cucumber/cucumber')
 import { When, Then, Given } from "@cucumber/cucumber";
 import { chromium } from 'playwright';
 import { loginpage } from "../../POM pages/loginpage.js";
@@ -7,10 +6,7 @@ import { leadscreationpage } from '../../POM pages/leadCreationPage.js';
 import { leadspage } from '../../POM pages/leadspage.js';
 import { logoutpage } from '../../POM pages/logoutpage.js';
 import { expect } from "playwright/test";
-// const dataset = JSON.parse(JSON.stringify(require("../../Testdata/testDataCRM.json")));
 
-// let page;
-const browser = await chromium.launch({ headless: false });
 const context = await browser.newContext();
 const page = await context.newPage();
 
@@ -53,5 +49,4 @@ Then('Logout from crm', async function () {
     const lop = new logoutpage(page);
     await lop.signout();
     // await browser.close();
-
 });

@@ -11,8 +11,6 @@ async leadscredentials(lastname,title){
     await this.lastname.fill(lastname);
     await this.title.fill(title);
     await this.savebtn.click();
-
-
 }
 
 }
